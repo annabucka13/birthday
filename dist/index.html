@@ -2,7 +2,6 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/birthday/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>birthday</title>
     <script type="module" crossorigin src="/birthday/assets/index-DMqCLvZV.js"></script>
@@ -11,8 +10,8 @@
   <body>
     <h1 class="text-2xl font-bold text-primary">Urodziny</h1>
 <div>
-  <label>Dzień urodzenia: <input type="number" id="day"></label>
-  <label>Miesiąc urodzenia: <input type="number" id="month"></label>
+  <label>Dzień urodzenia: <input type="number" id="day" min="1" max="31"></label>
+  <label>Miesiąc urodzenia: <input type="number" id="month" min="1" max="12"></label>
   <button id="submit" class="bg-blue-300 p-4">Submit</button>
 
 </div>

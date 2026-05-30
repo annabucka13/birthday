@@ -3,8 +3,10 @@ import dayjs from "dayjs"
 import isSameOrBefore from "dayjs/plugin/isSameOrBefore"
 dayjs.extend(isSameOrBefore)
 document.getElementById("submit").addEventListener("click", () => {
-  const day = document.getElementById("day").value
-  const month = document.getElementById("month").value
+  const dateValue= document.getElementById("birthday-date").value
+  const birthday_input = dayjs(dateValue)
+  const day = birthday_input.date()
+  const month = birthday_input.month()+1
   const today = dayjs()
   let birthday = dayjs().year(today.year()).month(month-1).date(day)
   if (birthday.isAfter(today)){
